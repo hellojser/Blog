@@ -1,16 +1,28 @@
 {
-  "name": "vuepress-starter",
-  "version": "1.0.0",
-  "description": "CloudBase Framework VuePress Example",
-  "main": "index.js",
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
-    "deploy": "cloudbase framework deploy"
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
   },
-  "author": "BookerZhao",
-  "license": "ISC",
-  "devDependencies": {
-    "vuepress": "^1.5.0"
+  "hexo": {
+    "version": "5.4.0"
+  },
+  "dependencies": {
+    "hexo": "^5.0.0",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^4.0.0",
+    "hexo-renderer-stylus": "^2.0.0",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-landscape": "^0.0.3",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.5.1"
   }
 }

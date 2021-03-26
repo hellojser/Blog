@@ -7,14 +7,27 @@ on:
     branches: [ master ]
 
 jobs:
-  deploy:
+    build:
     runs-on: ubuntu-latest
-    name: deploy
+    name: Deploy Hexo Souce Repo to Tencent CloudBase
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Deploy to Tencent CloudBase
-        uses: TencentCloudBase/cloudbase-action@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      # NPM and Hexo
+      - name: NPM
+        run: npm install
+      - name: Clean
+        run: ./node_modules/.bin/hexo clean
+      - name: Generate
+        run: ./node_modules/.bin/hexo generate
+      # Deploy static to Tencent CloudBase
+      - name: Deploy static to Tencent CloudBase
+        id: deployStatic
+        uses: TencentCloudBase/cloudbase-action@v1.1.1
         with:
           secretId: ${{ secrets.SECRETID }}
           secretKey: ${{ secrets.SECRETKEY }}

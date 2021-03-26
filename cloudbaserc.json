@@ -11,8 +11,8 @@
             "vuepress": {
                 "use": "@cloudbase/framework-plugin-website",
                 "inputs": {
-                    "buildCommand": "npm run build",
-                    "outputPath": ".vuepress/dist"
+                    "buildCommand": "npx hexo generate",
+                    "outputPath": "./public"
                 }
             }
         }
