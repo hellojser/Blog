@@ -76,6 +76,6 @@ post:
 
 author:
     # Your biography (Markdown and HTML supported)
-    bio: "种一棵树最好的时间是十年前，而后是现在。"
+    bio: "种一棵树最好的时间是十年前，而后是现在"
     # Your job
-    job: "fe@汽车之家"
+    job: "FE@汽车之家"
